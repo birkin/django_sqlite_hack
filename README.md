@@ -18,7 +18,7 @@ Useful where it _is_ possible to use newer versions of Django, but is _not_ poss
 
 ## Usage
 
-`$ ./hack_django_sqlite_connector.sh '/path/to/venv_dir'`
+`$ ./django_sqlite_hack.sh '/path/to/venv_dir'`
 
 ---
 

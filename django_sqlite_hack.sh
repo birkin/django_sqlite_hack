@@ -1,16 +1,18 @@
 #!/bin/bash
 
 ## Purpose:
-## This script hacks Django's sqlite package to enable it to work with an old version
-##   of sqlite3 on an old version of RedHat.
+## This script hacks Django's sqlite connictor package to enable it to work with an old version of sqlite3.
 ##
 ## Flow:
-## It checks if django and pysqlite3 and pysqlite3-binary are installed in the virtual environment.
+## It checks if Django and pysqlite3 and pysqlite3-binary are installed in the virtual environment.
 ## If the required packages are not found, the script alerts the user and exits.
 ## If the packages are found, it proceeds to update Django's `sqlite3/base.py` file.
 ##
 ## Usage:
-## $ ./hack_django_sqlite_connector.sh '/path/to/venv_dir'
+## $ ./django_sqlite_hack.sh '/path/to/venv_dir'
+##
+## More info:
+## <https://github.com/Brown-University-Library/django_sqlite_hack>
 ##
 ## Credit to <https://github.com/jmanc> for figuring out original solution.
 
