@@ -22,6 +22,19 @@ Useful where it _is_ possible to use newer versions of Django, but is _not_ poss
 
 ---
 
+## Notes
+
+- _Requires_ a venv-dir-path to be passed in; doesn't auto-use an existing activated one. This was largely a function of me not having done this update before, and wanting to be careful and explicit, but I think it's a reasonable design.
+
+- Doesn't try to install any packages. I figured if the two pysqlite packages are needed to run the app on dev, they should be in the `staging.in`/`staging.txt` requirements-files. So this script checks for the two pysqlite packages (and django package), and alerts and quits if they're not installed.
+
+- Allows either `uv` (yay!) or `pip` to be used to generate the freeze output -- which is used to check for the three required packages.
+
+- Figures out the python version from the activated venv. My thinking: we'll increasingly start new projects with `python 3.12`, and may have the sqlite issue on some of our dev-servers for some time.
+
+---
+
+
 ## Credit
 
 - To <https://github.com/jmanc> for figuring out original solution.
